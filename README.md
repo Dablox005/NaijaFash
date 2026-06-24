@@ -1,69 +1,48 @@
-# QuickCart - A simple eCommerce website
+# 🇳🇬 NaijaFash
 
-QuickCart is an open-source **Next.js eCommerce frontend** project.  
-It provides a modern, fast and customizable shopping UI.  
-This repo is **frontend only** – contributors can improve the design, add new pages, animations and more.
+NaijaFash is a curated, high-end e-commerce platform dedicated to showcasing an elite array of contemporary Nigerian fashion brands. Blending raw streetwear aesthetics with luxury high-fashion elements, the platform features premium limited-edition collections, heavy cotton cuts, custom graphics, and bold alté statement pieces designed to break traditional boundaries.
 
 ---
 
-## Features
+## 🚀 Tech Stack
 
--   Built with **Next.js + Tailwind CSS**
--   Responsive design
--   Reusable components
--   Customizable layouts and colors
--   Open for contributions (UI/UX, animations, themes, layouts etc.)
-
----
-
-## Getting Started
-
-1. Clone the repo
-
-    ```bash
-    git clone https://github.com/GreatStackDev/QuickCart.git
-    cd QuickCart
-    ```
-
-2. Install dependencies
-
-    ```bash
-    npm install
-    ```
-
-3. Run locally
-
-    ```bash
-    npm run dev
-    ```
+- **Frontend Framework:** Next.js (App Router, Turbopack)
+- **Styling:** Tailwind CSS (featuring a high-contrast Neon Green `#00D865` design language)
+- **State & Routing:** React Context API & Native Next.js Navigation
+- **Backend Environment:** PHP / Apache (Local staging via XAMPP)
+- **Database Management:** MySQL (Secure relational structure for customer data and inventory)
 
 ---
 
-## Contributing
+## 🛠️ Features
 
-We welcome all kinds of contributions! You can:
-
-- Create new pages
-- Improve layouts
-- Add animations and transitions
-- Enhance responsiveness
-- Refactor components
-- Suggest new UI/UX ideas
-- Add themes or color variations
-- Introduce accessibility improvements
-- Add filtering/search features
-- Improve documentation
-
-Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+- **Dynamic Showcase UI:** High-impact, responsive grid components (`FeaturedProduct`, `HomeProducts`) featuring fluid image animations and hover states.
+- **Interactive Multi-brand Cart:** Context-driven shopping cart management displaying item counts, adaptive currency configurations, real-time breakdown computation (subtotal, shipping, and a 2% custom local tax).
+- **Comprehensive Vendor/Seller Dashboard:** Secure, isolated internal panels with sidebar routing for seamlessly adding items, modifying active product arrays, and tracking orders.
+- **Seamless Drop Subscriptions:** High-contrast, interactive newsletter module built for capturing fast-paced customer engagement before limited-edition collection drops.
 
 ---
 
-## License
+## 📂 Project Structure
 
-This project is licensed under the **MIT License**.
-
----
-
-## 🌟 Contributors
-
-Thanks to everyone who contributes to **QuickCart**!
+```text
+├── app/
+│   ├── seller/
+│   │   ├── layout.jsx        # Vendor admin isolated layout
+│   │   ├── page.jsx          # "Add Product" management module
+│   │   ├── product-list/     # Active catalog listing matrix
+│   │   └── orders/           # Operational order tracking view
+├── components/
+│   ├── Navbar/
+│   │   └── logong.jsx        # Unified brand identity component
+│   ├── seller/
+│   │   └── Navbar.jsx        # Dedicated seller dashboard layout
+│   ├── FeaturedProduct.jsx   # Curated premium drop grids
+│   ├── HomeProducts.jsx      # High-density popular item components
+│   ├── ProductCard.jsx       # Individual dynamic item showcase nodes
+│   ├── OrderSummary.jsx      # Address configurations and real-time ledger
+│   └── NewsLetter.jsx        # Subscriber engagement banner
+├── context/
+│   └── AppContext.jsx        # Unified application runtime state
+└── public/
+    └── assets/               # Localized vector iconography and design assets

@@ -41,6 +41,13 @@ import sm_controller_image from "./sm_controller_image.png";
 import jbl_soundbox_image from "./jbl_soundbox_image.png";
 import boy_with_laptop_image from "./boy_with_laptop_image.png";
 import checkmark from "./checkmark.png";
+import model1 from "./Model VSC 02.png";
+import model2 from "./Model VSC 03.png";
+import model3 from "./Model VSC 04.png";
+import model4 from "./Model VSC 05.png";
+import alte from "./Alte_Culture.jpg";
+import str1 from "./street_1.jpg";
+import str2 from "./street_2.jpg";
 import product_details_page_apple_earphone_image1 from "./product_details_page_apple_earphone_image1.png";
 import product_details_page_apple_earphone_image2 from "./product_details_page_apple_earphone_image2.png";
 import product_details_page_apple_earphone_image3 from "./product_details_page_apple_earphone_image3.png";
@@ -48,6 +55,9 @@ import product_details_page_apple_earphone_image4 from "./product_details_page_a
 import product_details_page_apple_earphone_image5 from "./product_details_page_apple_earphone_image5.png";
 
 export const assets = {
+  alte,
+  str1,
+  str2,
   logo,
   search_icon,
   user_icon,
@@ -95,7 +105,11 @@ export const assets = {
   product_details_page_apple_earphone_image3,
   product_details_page_apple_earphone_image4,
   product_details_page_apple_earphone_image5,
-  checkmark
+  checkmark,
+  model1,
+  model2,
+  model3,
+  model4
 };
 
 export const BagIcon = () => {
@@ -130,155 +144,176 @@ export const HomeIcon = () => (
   </svg>
 );
 
+//10 Items in total
 export const productsDummyData = [
+  //1
   {
     "_id": "67a1f4e43f34a77b6dde9144",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Apple AirPods Pro 2nd gen",
-    "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
-    "price": 499.99,
-    "offerPrice": 399.99,
+    "name": "Hero Armless tee-Black",
+    "description": "The Hero Armless tee in classic black is your go-to piece for effortless style. Designed with a sleek, minimalist silhouette, this armless tee offers freedom of movement and a contemporary look that works for any occasion. Crafted from soft, breathable fabric, it ensures comfort throughout the day. Pair it with jeans, shorts, or skirts for a versatile outfit that exudes confidence and modern fashion.",
+    "price": 131240.99,
+    "offerPrice": 114399.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k4dafzhwhgcn5tnoylrw.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/j212frakb8hdrhvhajhg.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/imwuugqxsajuwqpkegb5.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k1oqaslw5tb3ebw01vvj.webp"
+      "https://www.zttw.store/cdn/shop/files/ZTTW_26S.png?v=1777487486&width=3000",
+      "https://www.zttw.store/cdn/shop/files/ZTTW_28F.png?v=1777487486&width=3000",
     ],
-    "category": "Earphone",
+    "category": "Clothing",
     "date": 1738667236865,
     "__v": 0
   },
+  //2
   {
     "_id": "67a1f52e3f34a77b6dde914a",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Bose QuietComfort 45",
-    "description": "The Bose QuietComfort 45 headphones are engineered for exceptional sound quality and unparalleled noise cancellation. With a 24-hour battery life and comfortable, lightweight design, these headphones deliver premium audio for any environment. Whether on a flight, in the office, or at home, the Bose QC45 blocks out distractions, offering an immersive listening experience.",
-    "price": 429.99,
-    "offerPrice": 329.99,
+    "name": "Black Thunderbolt set",
+    "description": "This product is a two-Piece set, including both hoodie top and matching pants. Designed with a unique and intricate approach,it features expertly crafted side pockets, Flawless embiodery and precision stitching for a refined finish. The hoodie boasts a comfortable fit with a drawstring hood and ribbed cuffs, while the pants offer a relaxed silhouette with an elastic waistband. Made from high-quality materials, this set is perfect for those who want to make a bold fashion statement while enjoying comfort and style.",
+    "price": 433129.99,
+    "offerPrice": 413329.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/m16coelz8ivkk9f0nwrz.webp"
+      "https://www.zttw.store/cdn/shop/files/zttw_37.png?v=1777492912&width=3000",
+      "https://www.zttw.store/cdn/shop/files/zttw_38.png?v=1777492910&width=3000",
+      "https://www.zttw.store/cdn/shop/files/ZTTW_1PF.png?v=1777492910&width=3000",
+      "https://www.zttw.store/cdn/shop/files/ZTTW_2P.png?v=1777492910&width=3000",
+      "https://www.zttw.store/cdn/shop/files/DSC00520.jpg?v=1741963851&width=3000",
+      "https://www.zttw.store/cdn/shop/files/DSC00583.jpg?v=1741963219&width=3000"
+
     ],
-    "category": "Headphone",
+    "category": "Clothing",
     "date": 1738667310300,
     "__v": 0
   },
+  //3
   {
     "_id": "67a1f5663f34a77b6dde914c",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Samsung Galaxy S23",
-    "description": "The Samsung Galaxy S23 offers an all-encompassing mobile experience with its advanced AMOLED display, offering vibrant visuals and smooth interactions. Equipped with top-of-the-line fitness tracking features and cutting-edge technology, this phone delivers outstanding performance. With powerful hardware, a sleek design, and long battery life, the S23 is perfect for those who demand the best in mobile innovation.",
-    "price": 899.99,
-    "offerPrice": 799.99,
+    "name": "GoCrazy Opium Spikey Jorts",
+    "description": "GoCrazy Opium Spikey Jorts are a bold and edgy fashion statement, designed for those who dare to stand out. Crafted with high-quality denim, these jorts feature a unique spiked design that adds a rebellious flair to your outfit. The distressed detailing and tailored fit ensure both comfort and style, making them perfect for casual outings or music festivals. Pair them with a graphic tee and sneakers for an effortlessly cool look.",
+    "price": 108899.99,
+    "offerPrice": 96799.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/xjd4eprpwqs7odbera1w.webp"
+      "https://swestkicks.co.za/cdn/shop/files/GoCrazyOpiumSpikeyJort.png?v=1769700987&width=5000"
     ],
-    "category": "Smartphone",
+    "category": "Clothing",
     "date": 1738667366224,
     "__v": 0
   },
+  //4
   {
     "_id": "67a1f5993f34a77b6dde914e",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Garmin Venu 2",
-    "description": "The Garmin Venu 2 smartwatch blends advanced fitness tracking with sophisticated design, offering a wealth of features such as heart rate monitoring, GPS, and sleep tracking. Built with a 24-hour battery life, this watch is ideal for fitness enthusiasts and anyone looking to enhance their daily lifestyle. With a stunning AMOLED display and customizable watch faces, the Venu 2 combines technology with style seamlessly.",
-    "price": 399.99,
-    "offerPrice": 349.99,
+    "name": "GoCrazy Black Benjamin Franklin Distressed T-Shirt",
+    "description": "A classic icon reworked the GoCrazy way. The Black Benjamin Franklin Distressed T-Shirt flips heritage into street culture, featuring a bold graphic of Benjamin Franklin iced out in chains, finished with the GoCrazy logo beneath. The distressed finishing and boxy silhouette give it a worn-in, vintage feel — the kind of tee that looks better the more you wear it. Statement piece, no explanation needed.",
+    "price": 150399.99,
+    "offerPrice": 135349.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/hdfi4u3fmprazpnrnaga.webp"
+      "https://swestkicks.co.za/cdn/shop/files/GoCrazyBlackBenjaminFranklinDistressedT-Shirt.png?v=1769712276&width=5000"
     ],
-    "category": "Earphone",
+    "category": "Clothing",
     "date": 1738667417511,
     "__v": 0
   },
+   //5
   {
     "_id": "67a1f5ef3f34a77b6dde9150",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "PlayStation 5",
-    "description": "The PlayStation 5 takes gaming to the next level with ultra-HD graphics, a powerful 825GB SSD, and ray tracing technology for realistic visuals. Whether you're into high-action games or immersive storytelling, the PS5 delivers fast loading times, seamless gameplay, and stunning visuals. It's a must-have for any serious gamer looking for the ultimate gaming experience.",
-    "price": 599.99,
-    "offerPrice": 499.99,
+    "name": "HF Panel Cap",
+    "description": "Elevate your everyday style with the HF Panel Capâ€”a modern essential designed for the fashion-forward individual. Crafted with premium materials and clean lines, this cap features a structured panel design that delivers both comfort and contemporary appeal. Perfect for casual outings, outdoor adventures, or completing your streetwear look. The adjustable fit ensures a personalized wear experience for all head sizes.",
+    "price": 360599.99,
+    "offerPrice": 350499.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/dd3l13vfoartrgbvkkh5.webp"
+      "https://highfashionbyjol.com/cdn/shop/files/HF_Nov_49_1.png?v=1779728566&width=960",
+      "https://highfashionbyjol.com/cdn/shop/files/HF_Nov_48_1.png?v=1779728564&width=640",
+      "https://highfashionbyjol.com/cdn/shop/files/HF_Nov_50_1.png?v=1779728566&width=640"
     ],
     "category": "Accessories",
     "date": 1738667503075,
     "__v": 0
   },
+   //6
   {
     "_id": "67a1f70c3f34a77b6dde9156",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Canon EOS R5",
-    "description": "The Canon EOS R5 is a game-changing mirrorless camera with a 45MP full-frame sensor, offering ultra-high resolution and the ability to shoot 8K video. Whether you're capturing professional-quality stills or cinematic video footage, this camera delivers exceptional clarity, speed, and color accuracy. With advanced autofocus and in-body stabilization, the R5 is ideal for photographers and videographers alike.",
-    "price": 4199.99,
-    "offerPrice": 3899.99,
+    "name": "HF RACER ORANGE TOP",
+    "description": "The HF Racer top is trendy piece with sleek and sporty design with a cool fusion of black and white. It features a comfortable, breathable and moisture wicking fabric. Perfect for casual wear or light workouts, this top is designed to keep you looking stylish while staying comfortable. The vibrant orange color adds a pop of energy to your wardrobe, making it a standout choice for any occasion.",
+    "price": 324199.99,
+    "offerPrice": 313899.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/r5h370zuujvrw461c6wy.webp"
+      "https://highfashionbyjol.com/cdn/shop/files/Uzii-4613-1-scaled.jpg?v=1726236146&width=640"
     ],
-    "category": "Camera",
+    "category": "Clothing",
     "date": 1738667788883,
     "__v": 0
   },
+    //7
   {
     "_id": "67a1f7c93f34a77b6dde915a",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "MacBook Pro 16",
-    "description": "The MacBook Pro 16, powered by Apple's M2 Pro chip, offers outstanding performance with 16GB RAM and a 512GB SSD. Whether you're editing high-resolution video, developing software, or multitasking with ease, this laptop can handle the toughest tasks. It features a stunning Retina display with True Tone technology, making it a top choice for professionals in creative industries or anyone who demands premium performance in a portable form.",
-    "price": 2799.99,
-    "offerPrice": 2499.99,
+    "name": "Ashluxe Momentum Jersey T-Shirt Green",
+    "description": "The Ashluxe Momentum Jersey T-Shirt from the Manor II drop blends modern streetwear with athletic-inspired design. Featuring contrast mesh side panels and a relaxed boxy silhouette, this t-shirt delivers breathable comfort and elevated style for contemporary luxury wardrobes.",
+    "price": 122799.99,
+    "offerPrice": 102499.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/rzri7kytphxalrm9rubd.webp"
+      "https://sfycdn.speedsize.com/f872e742-7b4a-4913-b7dc-4d0ce34f2142/https://ash-luxe.com/cdn/shop/files/Ashluxemomentumjerseytshirtgreen_0c845d15-af01-4588-a277-95a05e4ae2cb.png?v=1768674625&width=800",
+      "https://sfycdn.speedsize.com/f872e742-7b4a-4913-b7dc-4d0ce34f2142/https://ash-luxe.com/cdn/shop/files/Ashluxemomentumjerseytshirtgreen2_5b7555f2-fb32-4797-b36d-8a60f833bcfc.png?v=1768674624&width=800"
     ],
-    "category": "Laptop",
+    "category": "Clothing",
     "date": 1738667977644,
     "__v": 0
   },
+    //8
   {
     "_id": "67a1f8363f34a77b6dde915c",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Sony WF-1000XM5",
-    "description": "Sony WF-1000XM5 true wireless earbuds deliver immersive sound with Hi-Res Audio and advanced noise cancellation technology. Designed for comfort and quality, they provide a stable, snug fit for a secure listening experience. Whether you're working out or traveling, these earbuds will keep you connected with the world around you while enjoying rich, clear sound.",
-    "price": 349.99,
-    "offerPrice": 299.99,
+    "name": "Ashluxe Inferno Noir T-Shirt Black",
+    "description": "Ashluxe Inferno Noir T-Shirt Black is a premium streetwear piece that combines comfort and style. Crafted from high-quality materials, this black t-shirt features a sleek design with the Ashluxe Inferno logo prominently displayed. Its soft fabric ensures a comfortable fit, making it perfect for everyday wear or casual outings. The minimalist aesthetic and versatile color make it easy to pair with various outfits, while the Inferno branding adds a touch of urban edge to your wardrobe.",
+    "price": 225349.99,
+    "offerPrice": 195299.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/e3zjaupyumdkladmytke.webp"
+      "https://sfycdn.speedsize.com/f872e742-7b4a-4913-b7dc-4d0ce34f2142/https://ash-luxe.com/cdn/shop/files/ASHLUXE_INFERNO_NOIR_T-SHIRT_BLACK.png?v=1776789419&width=800",
+      "https://sfycdn.speedsize.com/f872e742-7b4a-4913-b7dc-4d0ce34f2142/https://ash-luxe.com/cdn/shop/files/ASHLUXEINFERNONOIRT-SHIRTBLACK2.png?v=1776789419&width=800"
     ],
-    "category": "Earphone",
+    "category": "Clothing",
     "date": 1738668086331,
     "__v": 0
-  },
+  }, 
+  //9
   {
     "_id": "67a1f85e3f34a77b6dde915e",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Samsung Projector 4k",
-    "description": "The Samsung 4K Projector offers an immersive cinematic experience with ultra-high-definition visuals and realistic color accuracy. Equipped with a built-in speaker, it delivers rich sound quality to complement its stunning 4K resolution. Perfect for movie nights, gaming, or presentations, this projector is the ultimate choice for creating an at-home theater experience or professional setting.",
-    "price": 1699.99,
-    "offerPrice": 1499.99,
+    "name": "Pith Lagos Hat",
+    "description": "Pith Lagos Hat is our take on the classic 'painter's hat' silhouette, with 3D puff embroidery design boldly imprinting 'Pith Lagos' with flat embroidered petal outline. The hat is made from 100% cotton, with a soft brushed finish and a structured crown. The adjustable strap at the back ensures a comfortable fit for all head sizes, making it a versatile accessory for any outfit.",
+    "price": 160099.99,
+    "offerPrice": 140099.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
+      "https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1768666742/Pith%20Africa/hat_side_af88940497.jpg",
+      "https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1768666743/Pith%20Africa/hat_front_ebff9b0703.jpg"
     ],
     "category": "Accessories",
     "date": 1738668126660,
     "__v": 0
   },
+  //10
   {
     "_id": "67a1fa4b3f34a77b6dde9166",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "ASUS ROG Zephyrus G16",
-    "description": "The ASUS ROG Zephyrus G16 gaming laptop is powered by the Intel Core i9 processor and features an RTX 4070 GPU, delivering top-tier gaming and performance. With 16GB of RAM and a 1TB SSD, this laptop is designed for gamers who demand extreme power, speed, and storage. Equipped with a stunning 16-inch display, it's built to handle the most demanding titles and applications with ease.",
-    "price": 2199.99,
-    "offerPrice": 1999.99,
+    "name": "Severenature X Hennessy Red Jersey",
+    "description": "Red heavyweight short sleeve sublimation jersey. Embroidery and printed logo at chest. Red. 100% polyester. Machine wash cold, tumble dry low. Imported.",
+    "price": 112199.99,
+    "offerPrice": 111999.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+      "https://i0.wp.com/www.garmspot.com/wp-content/uploads/2026/02/01-8-scaled.jpg?fit=2560%2C2560&ssl=1",
+      "https://i0.wp.com/www.garmspot.com/wp-content/uploads/2026/02/02-8-scaled.jpg?fit=2560%2C2560&ssl=1"
     ],
-    "category": "Laptop",
+    "category": "Clothing",
     "date": 1738668619198,
     "__v": 0
   }
-]
+] 
 
 export const userDummyData = {
   "_id": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-  "name": "GreatStack",
+  "name": "Daniel Tewogbade",
   "email": "admin@example.com",
   "imageUrl": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ycnlnUnFiUDBYT2dEZ2h1ZmRXcGlpdWV5OXoiLCJyaWQiOiJ1c2VyXzJzWkZIUzFVSUl5c0p5RFZ6Q3BRaFVoVElodyJ9",
   "cartItems": {
@@ -294,36 +329,33 @@ export const orderDummyData = [
     "items": [
       {
         "product": {
-          "_id": "67a1f4e43f34a77b6dde9144",
-          "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Apple AirPods Pro",
-          "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
-          "price": 499.99,
-          "offerPrice": 399.99,
-          "image": [
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/lrllaprpos2pnp5c9pyy.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/jqotgy2rvm36vfjv6lxl.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/niw7tqxvjsxt7wcehxeo.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/h8cq4x9cfzqzwaiarvpk.png"
-          ],
-          "category": "Earphone",
-          "date": 1738667236865,
-          "__v": 0
-        },
+                 "_id": "67a1f5993f34a77b6dde914e",
+                "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+               "name": "GoCrazy Black Benjamin Franklin Distressed T-Shirt",
+                "description": "A classic icon reworked the GoCrazy way. The Black Benjamin Franklin Distressed T-Shirt flips heritage into street culture, featuring a bold graphic of Benjamin Franklin iced out in chains, finished with the GoCrazy logo beneath. The distressed finishing and boxy silhouette give it a worn-in, vintage feel — the kind of tee that looks better the more you wear it. Statement piece, no explanation needed.",
+                "price": 150399.99,
+                "offerPrice": 135349.99,
+                 "image": [
+                   "https://swestkicks.co.za/cdn/shop/files/GoCrazyBlackBenjaminFranklinDistressedT-Shirt.png?v=1769712276&width=5000"
+                    ],
+                 "category": "Clothing",
+                  "date": 1738667417511,
+                  "__v": 0
+            },
         "quantity": 1,
-        "_id": "67a20934b3db72db5cc77b2c"
-      }
+        "_id": "67a20934b3db72db5cc77b2b"
+          },
     ],
-    "amount": 406.99,
+    "amount": 135349.99,
     "address": {
       "_id": "67a1e4233f34a77b6dde9055",
       "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
+      "fullName": "BIGDANDEV",
       "phoneNumber": "0123456789",
       "pincode": 654321,
-      "area": "Main Road , 123 Street, G Block",
-      "city": "City",
-      "state": "State",
+      "area": "Lagos State, Ikeja, 123 Street, G Block",
+      "city": "Ikeja",
+      "state": "Lagos",
       "__v": 0
     },
     "status": "Order Placed",
@@ -336,28 +368,29 @@ export const orderDummyData = [
     "items": [
       {
         "product": {
-          "_id": "67a1f52e3f34a77b6dde914a",
-          "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Bose QuietComfort 45",
-          "description": "The Bose QuietComfort 45 headphones are engineered for exceptional sound quality and unparalleled noise cancellation. With a 24-hour battery life and comfortable, lightweight design, these headphones deliver premium audio for any environment. Whether on a flight, in the office, or at home, the Bose QC45 blocks out distractions, offering an immersive listening experience.",
-          "price": 429.99,
-          "offerPrice": 329.99,
-          "image": [
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667311/m16coelz8ivkk9f0nwrz.png"
-          ],
-          "category": "Headphone",
-          "date": 1738667310300,
-          "__v": 0
+           "_id": "67a1f7c93f34a77b6dde915a",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "Ashluxe Momentum Jersey T-Shirt Green",
+    "description": "The Ashluxe Momentum Jersey T-Shirt from the Manor II drop blends modern streetwear with athletic-inspired design. Featuring contrast mesh side panels and a relaxed boxy silhouette, this t-shirt delivers breathable comfort and elevated style for contemporary luxury wardrobes.",
+    "price": 122799.99,
+    "offerPrice": 102499.99,
+    "image": [
+      "https://sfycdn.speedsize.com/f872e742-7b4a-4913-b7dc-4d0ce34f2142/https://ash-luxe.com/cdn/shop/files/Ashluxemomentumjerseytshirtgreen_0c845d15-af01-4588-a277-95a05e4ae2cb.png?v=1768674625&width=800",
+      "https://sfycdn.speedsize.com/f872e742-7b4a-4913-b7dc-4d0ce34f2142/https://ash-luxe.com/cdn/shop/files/Ashluxemomentumjerseytshirtgreen2_5b7555f2-fb32-4797-b36d-8a60f833bcfc.png?v=1768674624&width=800"
+    ],
+    "category": "Clothing",
+    "date": 1738667977644,
+    "__v": 0
         },
         "quantity": 1,
         "_id": "67a20949b3db72db5cc77b2f"
       }
     ],
-    "amount": 335.99,
+    "amount": 102499.99,
     "address": {
       "_id": "67a1e4233f34a77b6dde9055",
       "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
+      "fullName": "BIGDANDEV",
       "phoneNumber": "0123456789",
       "pincode": 654321,
       "area": "Main Road , 123 Street, G Block",
@@ -375,31 +408,28 @@ export const orderDummyData = [
     "items": [
       {
         "product": {
-          "_id": "67a1f4e43f34a77b6dde9144",
-          "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Apple AirPods Pro",
-          "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
-          "price": 499.99,
-          "offerPrice": 399.99,
-          "image": [
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/lrllaprpos2pnp5c9pyy.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/jqotgy2rvm36vfjv6lxl.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/niw7tqxvjsxt7wcehxeo.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/h8cq4x9cfzqzwaiarvpk.png"
-          ],
-          "category": "Earphone",
-          "date": 1738667236865,
-          "__v": 0
+          "_id": "67a1f5993f34a77b6dde914e",
+    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "name": "GoCrazy Black Benjamin Franklin Distressed T-Shirt",
+    "description": "A classic icon reworked the GoCrazy way. The Black Benjamin Franklin Distressed T-Shirt flips heritage into street culture, featuring a bold graphic of Benjamin Franklin iced out in chains, finished with the GoCrazy logo beneath. The distressed finishing and boxy silhouette give it a worn-in, vintage feel — the kind of tee that looks better the more you wear it. Statement piece, no explanation needed.",
+    "price": 150399.99,
+    "offerPrice": 135349.99,
+    "image": [
+      "https://swestkicks.co.za/cdn/shop/files/GoCrazyBlackBenjaminFranklinDistressedT-Shirt.png?v=1769712276&width=5000"
+    ],
+    "category": "Clothing",
+    "date": 1738667417511,
+    "__v": 0
         },
         "quantity": 1,
         "_id": "67a209bab3db72db5cc77b35"
       }
     ],
-    "amount": 406.99,
+    "amount": 135349.99,
     "address": {
       "_id": "67a1e4233f34a77b6dde9055",
       "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
+      "fullName": "BIGDANDEV",
       "phoneNumber": "0123456789",
       "pincode": 654321,
       "area": "Main Road , 123 Street, G Block",
@@ -417,12 +447,12 @@ export const addressDummyData = [
   {
     "_id": "67a1e4233f34a77b6dde9055",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "fullName": "GreatStack",
+    "fullName": "BIGDANDEV",
     "phoneNumber": "0123456789",
     "pincode": 654321,
-    "area": "Main Road , 123 Street, G Block",
-    "city": "City",
-    "state": "State",
+    "area": "Ikeja, 123 Street, G Block",
+    "city": "Ikeja",
+    "state": "Lagos",
     "__v": 0
   }
 ]

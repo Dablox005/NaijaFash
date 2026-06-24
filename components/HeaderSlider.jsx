@@ -1,41 +1,45 @@
-import React, { useState, useEffect } from "react";
+"use client";
+import React, { useState, useEffect, useMemo } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // <-- Imported useRouter hook
 
 const HeaderSlider = () => {
-  const sliderData = [
+  const router = useRouter(); // <-- Initialized router
+  
+  const sliderData = useMemo(() => [
     {
       id: 1,
-      title: "Experience Pure Sound - Your Perfect Headphones Awaits!",
-      offer: "Limited Time Offer 30% Off",
+      title: "Experience Real Culture - Your Perfect Statement Pieces Await!",
+      offer: "Alté & Culture Essentials 🦅",
       buttonText1: "Buy now",
-      buttonText2: "Find more",
-      imgSrc: assets.header_headphone_image,
+      buttonText2: "Go Crazy",
+      imgSrc: assets.model1,
     },
     {
       id: 2,
-      title: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
-      offer: "Hurry up only few lefts!",
+      title: "Street Meets Luxury - Ashluxe & High Fashion Are Here for You!!",
+      offer: "Highly Anticipated Drops 🔥",
       buttonText1: "Shop Now",
-      buttonText2: "Explore Deals",
-      imgSrc: assets.header_playstation_image,
+      buttonText2: "Explore Drops",
+      imgSrc: assets.model2,
     },
     {
       id: 3,
-      title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
-      offer: "Exclusive Deal 40% Off",
+      title: "Elevate Your Style - Discover the Latest in Fashion & Culture Today!",
+      offer: "Premium Wardrobe Staples 🌍",
       buttonText1: "Order Now",
       buttonText2: "Learn More",
-      imgSrc: assets.header_macbook_image,
+      imgSrc: assets.model4,
     },
-  ];
+  ], []);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderData.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [sliderData.length]);
 
@@ -44,7 +48,7 @@ const HeaderSlider = () => {
   };
 
   return (
-    <div className="overflow-hidden relative w-full">
+    <div className="overflow-hidden relative w-full select-none">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{
@@ -54,43 +58,65 @@ const HeaderSlider = () => {
         {sliderData.map((slide, index) => (
           <div
             key={slide.id}
-            className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#E6E9F2] py-8 md:px-14 px-5 mt-6 rounded-xl min-w-full"
+            className="flex flex-col md:flex-row items-center bg-[#E6E9F2] w-full min-w-full h-[600px] sm:h-[560px] md:h-[420px] lg:h-[500px] px-6 sm:px-12 md:px-16 mt-6 rounded-3xl overflow-hidden"
           >
-            <div className="md:pl-8 mt-10 md:mt-0">
-              <p className="md:text-base text-orange-600 pb-1">{slide.offer}</p>
-              <h1 className="max-w-lg md:text-[40px] md:leading-[48px] text-2xl font-semibold">
+            {/* Left Column: Text Content Block */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center text-left pt-8 pb-4 md:py-0 order-2 md:order-1 h-auto md:h-full z-10">
+              <p className="text-xs sm:text-sm font-semibold text-zinc-900 pb-1.5 flex items-center gap-1">
+                <span className="text-[#00D865] font-bold">//</span> {slide.offer}
+              </p>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight leading-snug sm:leading-snug md:leading-tight">
                 {slide.title}
               </h1>
-              <div className="flex items-center mt-4 md:mt-6 ">
-                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium">
+
+              <div className="flex items-center gap-2 mt-5 md:mt-6">
+                {/* Main Action Button */}
+                <button 
+                  onClick={() => router.push("/all-products")} // <-- Added catalog push router
+                  className="px-6 sm:px-8 py-2.5 bg-zinc-900 text-[#00D865] border-2 border-zinc-900 rounded-full text-xs sm:text-sm font-bold hover:bg-[#00D865] hover:text-black hover:border-[#00D865] transition-all duration-300 active:scale-95 shadow-md"
+                >
                   {slide.buttonText1}
                 </button>
-                <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">
+
+                {/* Secondary Explore Action Text Arrow */}
+                <button 
+                  onClick={() => router.push("/all-products")} // <-- Added catalog push router
+                  className="group flex items-center gap-1 px-3 py-2.5 text-xs sm:text-sm font-bold text-zinc-800 hover:text-black transition"
+                >
                   {slide.buttonText2}
-                  <Image className="group-hover:translate-x-1 transition" src={assets.arrow_icon} alt="arrow_icon" />
+                  <Image className="w-4 h-4 group-hover:translate-x-1 transition-transform" src={assets.arrow_icon} alt="arrow_icon" />
                 </button>
               </div>
             </div>
-            <div className="flex items-center flex-1 justify-center">
-              <Image
-                className="md:w-72 w-48"
-                src={slide.imgSrc}
-                alt={`Slide ${index + 1}`}
-              />
+
+            {/* Right Column: High-Fidelity Image Container Box */}
+            <div className="w-full md:w-1/2 h-[280px] sm:h-[320px] md:h-full order-1 md:order-2 relative flex items-end justify-center">
+              <div className="relative w-full max-w-[300px] sm:max-w-[360px] md:max-w-none md:w-full h-full md:h-[110%]">
+                <Image
+                  className="object-contain object-bottom pointer-events-none drop-shadow-[-15px_10px_20px_rgba(0,0,0,0.12)]"
+                  src={slide.imgSrc}
+                  alt={slide.title}
+                  fill
+                  sizes="(max-width: 768px) 360px, (max-width: 1024px) 50vw, 50vw"
+                  priority={index === 0}
+                />
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex items-center justify-center gap-2 mt-8">
+      {/* Slide Navigation Pagination Track */}
+      <div className="flex items-center justify-center gap-2 mt-5">
         {sliderData.map((_, index) => (
-          <div
+          <button
             key={index}
             onClick={() => handleSlideChange(index)}
-            className={`h-2 w-2 rounded-full cursor-pointer ${
-              currentSlide === index ? "bg-orange-600" : "bg-gray-500/30"
+            aria-label={`Slide target ${index + 1}`}
+            className={`h-2 transition-all duration-300 rounded-full focus:outline-none ${
+              currentSlide === index ? "w-7 bg-[#00D865]" : "w-2 bg-gray-400/40 hover:bg-gray-400/70"
             }`}
-          ></div>
+          ></button>
         ))}
       </div>
     </div>
